@@ -1,0 +1,33 @@
+HTML: Hyper Text Markup Language
+
+What does a server do?
+	Web servers are PC that are specifically tasked
+	to handle website requests for clients. 
+
+What does a web browser do?
+	Web browsers uses the internet to surf for
+	webpages using the server and URLs as addresses.
+	The request will fetch an HTML page and display
+	it into the browser.
+
+Server Client Process
+	User->Browser->HTTP(S) Request
+	Server->Receive Request-> *if search request*
+	forward request to app server
+	renders the html and provides assets(img)
+
+Web Components (6)
+	Client: send request
+	Server: receive request, process, send back
+	Protocol: HTTPS communication
+	database: storage of data
+	rendering: HTML/CSS/JAVASCRIPT
+	security: HTTPS secure data transmission
+
+Network Protocols (6)
+	HTTP: Hypertext transfer protocol
+	HTTPS: Hypertext transfer protocol secure
+	FTP: File transfer protocol
+	TCP: Transmission control protocol
+	IP: Internet protocol
+	DNS: Domain Name System
