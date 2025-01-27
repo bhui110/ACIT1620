@@ -1,0 +1,64 @@
+/* *{
+    margin:5px;
+    padding: 0;
+} */
+
+div p{
+    color:purple;
+}
+
+ul > ul > li{
+    color:orange;
+}
+
+p {
+    color:lightblue;
+}
+
+p.green{
+    color:lightgreen;
+}
+
+p.blue-matcha{
+    color:rgb(0, 153, 255);
+}
+
+p.hibiscus{
+    color:maroon;
+}
+
+p.blue-raspberry{
+    color:rgb(0, 225, 255);
+}
+
+body{
+    font-family:monospace;
+}
+
+h1,h2{
+    color:bisque;
+}
+
+h1{
+    border-bottom: 1px solid black;
+}
+
+em{
+    font-family:serif;
+}
+
+input[type="text"]{
+    border:2px solid blue;
+}
+/* input[type="text"]::selection{
+    border:2px solid red;
+} */
+
+a:hover{
+    color:red;
+}
+
+#unique{
+    font-size:20px;
+    color:darkred;
+}

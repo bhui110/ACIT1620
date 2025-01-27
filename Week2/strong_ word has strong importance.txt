@@ -1,0 +1,46 @@
+<strong>; word has strong importance
+<em>; such word changes the semantic meaning of the sentence
+<blockquote> indented
+<section>; section off content
+<article>; independent self contained content
+<cite>
+<ul>
+	<li>
+<ol>
+	<li>
+<dl>
+	<dt>
+	<dd>
+<a>
+<header>
+<footer>
+<abbr>
+<del>; indicate deleted text
+<ins>; indicate added text
+<mark>; highlight
+<nav>; nav links
+<aside>; indirect relation to main content
+<figure>; diagrams and illustrations
+	<img>
+	<figcaption>
+<style>
+<table>
+	<thead>
+		<tr>
+			<thead>
+	<tbody>
+		<tr>
+			<th>
+			<td>
+	<tfoot>
+		<tr>
+			<th>
+			<td>
+<title>
+<main>
+<details>
+	<summary>; caption or legend for details
+<audio>
+<video>
+<div class>; block-level element
+<span>; in-line level element
