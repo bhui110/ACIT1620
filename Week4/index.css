@@ -1,0 +1,36 @@
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items:center;
+    border:2px solid black;
+    padding:20px;
+    background-color: lightgrey;
+    gap:50px;
+}
+
+.flex-item{
+    flex: 1;
+    min-width: 100px;
+    max-width: 200px;
+    text-align: center;
+    border: 1px solid blue;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box{
+    display:flex;
+}
+
+.one{
+    flex: 1 1 auto;
+}
+.two{
+    flex: 1 1 auto;
+}
+.three{
+    flex: 1 1 auto;
+}
