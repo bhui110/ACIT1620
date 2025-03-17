@@ -1,0 +1,209 @@
+/*
+    ** IMPORTANT NOTE **
+
+    Styles do not have to match the provided solution exactly - try to get it as close as possible, paying attention to the requirements noted below.
+*/
+
+
+
+/*
+    Begin by creating five variables representing BCIT's brand colors
+
+    The variables can be named whatever you like, but the values must be:
+        #003c71                     (dark blue)
+        #296cf6                     (blue)
+        rgb(0 37 85 / 0.8)          (transparent blue)
+        #ffffff                     (white)
+        #fff400                     (yellow)
+
+    * NOTE: anywhere a color is required in your rules below, you MUST use the CSS variable - no hard-coded colors are allowed
+*/
+:root{
+    --darkblue:#003c71;
+    --blue:#296cf6;
+    --tblue:rgb(0 37 85 / 0.8);
+    --white:white;
+    --yellow: #fff400;
+}
+
+/*
+    HEADER STYLES
+    -------------
+    The header must: 
+        - extend all the way from the left edge of the viewport to the right edge of the viewport
+        - have a white background
+
+    The div with class 'menubar' must:
+        - have a dark blue background
+    
+    The list items inside the div with class 'menubar' must:
+        - have white text
+        - have a dark blue background
+        - have bold font weight
+        - must transition to dark blue text over a yellow background when hovered over
+        (use the transition property like- transition: background-color 500ms linear;)
+
+    All elements inside the div with class 'header' must be stacked horizontally across the page
+
+    The h1 with class logo must be 64px wide and 54px tall 
+
+    The list items inside the div with class 'header' must:
+        - have dark blue text
+        - have bold font weight
+        - have no underline (normally OR when hovered over)(Hint: use the text-decoration and set it to none).
+        - must transition to blue text with a 2px solid yellow bottom border when hovered over
+            * TIP: to avoid the position of the element "jumping" when hovering over, apply a default
+             bottom border of 2px solid transparent
+*/
+html,body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+}
+header{
+    background-color:var(--white);
+    width: 100%;
+    margin:0;
+    display:flex;
+    flex-direction: column;
+}
+div{
+    background-color: var(--darkblue);
+}
+.menubar{
+    display:flex;
+    justify-content: right;
+    margin:0;
+    padding-right: 5%;
+}
+.menubar ul{
+    display:flex;
+    gap:20px; 
+    margin:0;
+    padding:20px;   
+}
+.menubar li{
+    color:var(--white);
+    background-color: var(--dark-blue);
+    font-weight:bold;
+    list-style-type: none;
+    margin-right:auto;
+}
+.menubar li:hover{
+    background-color: var(--yellow);
+    color: var(--dark-blue);
+    transition: background-color 500ms linear;
+    padding:20px;
+    margin:-20px;
+}
+.logo{
+    width:64px;
+    height:54px;
+    justify-content: space-around;
+    align-items: center;
+    margin-left:30px;
+}
+.header{
+    background-color: var(--white);
+}
+.header ul{
+    display:flex;
+    list-style-type: none;
+    gap:30px;
+}
+.header a{
+    color:var(--dark-blue);
+    font-weight:bold;
+    text-decoration:none;
+    display:flex;
+    flex-direction: row;
+}
+.header a:hover{
+    color:var(--blue);
+    text-decoration: underline var(--yellow);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 10px;
+
+}
+
+
+/*
+    BIG INFO STYLES
+    ---------------
+    The section with id 'big-info' must:
+        - be 800px tall
+        - use the bcit-big-info.png image located inside the images folder as its background 
+
+    The div with class 'overlay' must:
+        - be positioned absolutely INSIDE the #big-info section (i.e. any values of top, right, bottom, and left must be relative to the #big-info element)
+        
+    All elements inside the div with class 'overlay' must: 
+        - have white text
+        - have appropriate font size and weight
+
+    The button element inside the div with class 'overlay' must:
+        - have a 1px solid white border
+        - have appropriate padding on the top, right, bottom, and left sides
+        - transition to a transparent blue background on hover ( transition: background-color 200ms ease-in;)
+*/
+main{
+    flex:1;
+}
+
+#big-info{
+    height:800px;
+}
+.overlay{
+    color:var(--white);
+    font-size: medium;
+    font-weight:bold;
+    padding:20px 100vh 0 20px;
+    position:absolute;
+    background-image: url("./images/bcit-big-info.png");
+    height:800px;
+
+}
+
+.overlay button{
+    border: 1px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+}
+.overlay button:hover{
+    transition: background-color 200ms ease-in;
+    background-color: var(--tblue);
+}
+
+
+/*
+    WELCOME STYLES
+    --------------
+
+    The h1 inside the section with id 'welcome' must:
+        - have dark blue text
+        - have appropriate font size and weight
+        - be placed sufficiently far enough away from the top and left edges of the section
+
+*/
+
+/*
+General hint
+Use the selectors appropriately (example: menubar ul, menubar li, menubar li:hover and so on...) 
+*/
+#welcome{
+    color:var(--dark-blue);
+    font-size: large;
+    font-weight:bold;
+    padding:30px;
+}
+
+.overlay {
+    position: absolute;
+}
+
+.menubar li:hover {
+    color: var(--dark-blue);
+    background-color: var(--yellow);
+}

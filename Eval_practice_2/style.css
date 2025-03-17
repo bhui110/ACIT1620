@@ -1,0 +1,19 @@
+header{
+    text-align:center;
+    font-size:larger;
+    font-weight:bold;
+    padding:50px;
+    color: white;
+    background-repeat: repeat-x;
+    background-color: darkcyan;
+}
+
+div{
+    display:flex;
+    flex-direction: column;
+}
+
+body{
+    height:100vh;
+}
+
