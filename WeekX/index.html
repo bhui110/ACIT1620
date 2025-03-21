@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let chevy = {
+            make: "Chevy",
+            model: "Bel Air",
+            year: 1957,
+            color: "red",
+            passengers: 2,
+            convertible: false,
+            mileage: 1021,
+            started: false,
+            start: function(){
+                this.started = true;
+            },
+            stop: function(){
+                this.started = false;
+            },
+            drive: function(){
+                if (this.started){
+                    alert(this.make + " " + this.model + " goes zoom zoom.");
+                }
+                else{
+                    alert("You need to start the engine first...")
+                };
+            }
+        };
+
+        let fiat = {
+            make: "Something",
+            model: "Something2",
+            year: 1988,
+            color: "light blue",
+            passengers: 4,
+            convertible: false,
+            mileage: 10123
+        };
+
+        let cadi = {
+            make: "GM",
+            model: "Cadillac",
+            year: 1955,
+            color: "Beige",
+            passengers: 5,
+            convertible: true,
+            mileage: 11231
+        };
+
+        let taxi = {
+            make: "Webville",
+            model: "A013123",
+            year: 1966,
+            color: "yellow",
+            passengers: 5,
+            convertible: false,
+            mileage: 1012
+        };
+ 
+        function prequal(car) {
+            if (car.mileage > 10000) {
+                return false;
+            }
+            else if(car.year > 1960) {
+                return false;
+            }
+            return true;
+        };
+        function isWorthAlook(didQualify, car){
+            if (didQualify) {
+                console.log("You gotta check out this " + car.make + " " + car.model);
+            }
+            else{
+                console.log("You should pass on this " + car.make + " " + car.model);
+            }
+        };
+
+        // let worth = prequal(car);
+        // if (worth) {
+        //     console.log("You gotta check out this " + taxi.make + " " + taxi.model);
+        // }
+        // else {
+        //     console.log("You should pass on this " + taxi.make + " " + taxi.model);
+        // };
+
+        isWorthAlook(prequal(taxi), taxi);
+        chevy.drive();
+        chevy.stop();
+
+        for (prop in fiat) {
+            console.log(prop + ": " + fiat[prop])
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

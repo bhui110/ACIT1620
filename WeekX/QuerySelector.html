@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Example</title>
+</head>
+<body>
+    <h1 id="title"> Hello World!</h1>
+    <p class="highlight"> Paragraph 1</p>
+    <p class="highlight"> Paragraph 2</p>
+    <p class="highlight"> Paragraph 3</p>
+    <button onclick="changeColors()"> Change Colors</button>
+    <script>
+        function changeColors(){
+            // let firstHighlight = document.querySelector(".highlight");
+            // firstHighlight.innerText = "Text Changed!"
+            let elements = document.querySelectorAll(".highlight");
+            elements.forEach(el=> {
+                el.style.color="blue"
+            });
+        }
+    </script>
+
+</body>
+</html>

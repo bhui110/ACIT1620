@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function makeCar() {
+            let makes = ["Chevy", "Ford", "Fiat"];
+            let models = ["Cadillac", "500", "bel"];
+            let years = [1955, 1957, 1948];
+            let colors = ["Red", "Blue", "Green"];
+            let convertible = [true, false];
+
+            let rand1 = Math.floor(Math.random()*makes.length);
+            let rand2 = Math.floor(Math.random()*models.length);
+            let rand3 = Math.floor(Math.random()*years.length);
+            let rand4 = Math.floor(Math.random()*colors.length);
+            let rand5 = Math.floor(1+Math.random()*5);
+            let rand6 = Math.floor(Math.random()*convertible.length);
+
+            let car = {
+                makes: makes[rand1],
+                models: models[rand2],
+                year: years[rand3],
+                color: colors[rand4],
+                passengers:rand5,
+                convertible: convertible[rand6]
+            };
+            return car
+        };
+
+        function display(car){
+            console.log("This " + car.color + " " + car.makes + " " + car.models + " of year " + car.year + " has " + car.passengers + " seat(s).");
+        };
+
+        for(let i=0; i<5; i++){
+            display(makeCar())
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
