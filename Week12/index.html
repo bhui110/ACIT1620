@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Guesser</title>
+    <style>
+        body{
+            margin:20px
+        }
+    </style>
+    <script>
+        window.onload = init;
+        function init() {
+            let images = document.getElementsByTagName("img");
+            for (let i=0; i<images.length;i++){
+                images[i].onclick = showAnswer;
+            }
+        }
+
+        function showAnswer(e) {
+            let image = e.target;
+            let name = image.id;
+            name = "images/" + name + ".jpg";
+            image.src = name;
+            setTimeout(reblur, 2000, image);
+        }
+
+        function reblur(image){
+            let name = image.id;
+            name = "images/" + name + "blur.jpg";
+            image.src = name;
+        }
+    </script>
+</head>
+<body>
+    <img id="zero" src="images/zeroblur.jpg">
+    <img src="images/oneblur.jpg" alt="" id="one">
+    <img src="images/twoblur.jpg" alt="" id="two">
+    <img src="images/threeblur.jpg" alt="" id="three">
+    <img src="images/fourblur.jpg" alt="" id="four">
+    <img src="images/fiveblur.jpg" alt="" id="five">
+</body>
+</html>

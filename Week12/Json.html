@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f8ff;
+            padding:20px;
+        }
+        .profile-card{
+            background-color: #fff;
+            padding:20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0,1);
+            width:300px;
+            margin:auto;
+        }
+        .profile-card h2{
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .profile-card p{
+            color: #555;
+            margin: 5px 0;
+        }
+        .skills{
+            margin-top:15px;
+        }
+        .skills span{
+            display: iniline-block;
+            background-color: #87cefa;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right:5px;
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "profile-card" id = "profile">
+        <!--- JSON data will be loaded here-->
+    </div>
+    <script>
+        const userData = {
+            "name": "Alice Jhonson",
+            "age": 28,
+            "email": "alice_johnson@gmail.com",
+            "isStudent": False,
+            "skills": ["HTML", "CSS", "JS", "React"],
+            "address": {
+                "street": "456 Oak Street",
+                "city": "Toronto",
+                "postalcode": "ABCDEFG"
+            }
+        }
+        function displayUserProfile(data) {
+            const profileDiv = document.getElementById("profile");
+
+            profileDiv.innerHTML =
+            `<h2>${data.name}</h2>
+            <p><strong>Age:</strong>${data.age}</p>
+            <p><strong>Email:</strong ${data.email}</p>
+            <p><strong>City:</strong ${data.address.city}</p>
+            <p><strong>Student:</strong ${data.isStudent? "Yes" : "No"}</p>
+                
+            <div class="[skills]">
+            <strong>Skills:</strong><br>    
+            ${data.skills.map(skill=> `<span>${skill}</span`).join(" ")}
+            </div>`;
+        }
+        displayUserProfile(userData)
+    </script>
+</body>
+</html>

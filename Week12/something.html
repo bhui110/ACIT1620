@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        window.onload = init;
+        function init() {
+            let map = document.getElementById("map");
+            map.onmousemove = showcoords;
+        }
+
+        function showcoords(e) {
+            let coords = document.getElementById("coords")
+            let x = e.clientX;
+            let y = e.clientY;
+            coords.innerHTML = "Map Coordinates: " + x + ", " + y;
+        }
+    </script>
+</head>
+<body>
+    <img id="map" src="images\map.jpg">
+    <p id = "coords">Map coordinates: </p>
+</body>
+</html>

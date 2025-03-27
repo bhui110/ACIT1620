@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Events Example</title>
+    <style>
+        body{
+            height:1500px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Resize the window or scroll</h2>
+    <p id="size">Size: </p>
+    <p id="scrollPos">Scroll position: </p>
+
+    <script>
+        window.addEventListener("resize", function() {
+            document.getElementById("size").textContent=
+            `Width: ${window.innerWidth},
+            Height: ${window.innerHeight}`;
+        });
+        window.addEventListener("scroll", function() {
+            document.getElementsById("scrollPos").textContent=
+            `Scroll positions: ${window.scrollY}px:`;
+        });
+    </script>
+</body>
+</html>
